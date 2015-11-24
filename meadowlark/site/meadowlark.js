@@ -13,6 +13,14 @@ app.set('port', process.env.PORT || 3000);
 //route for static resources
 app.use(express.static(__dirname + '/public'));
 
+
+//detect if tests are needed by reading query string param
+app.use(function(req, res, next){
+        res.locals.showTests = app.get('env') !== 'production' &&
+                req.query.test === '1';
+        next();
+});
+
 //routes
 app.get('/', function(req, res) {
         res.render('home');
@@ -27,7 +35,8 @@ var fortunes = [
 ];
 
 app.get('/about', function(req, res){
-        res.render('about', { fortune: fortune.getFortune()});
+        res.render('about', { fortune: fortune.getFortune(),
+                              pageTestScript: '/qa/tests-about.js'});
 });
 
 // 404 catch-all handler (middleware)
