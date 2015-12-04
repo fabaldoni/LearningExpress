@@ -19,6 +19,8 @@
     "grunt-contrib-jshint": "^0.11.3",
     "grunt-exec": "^0.4.6",
     "grunt-link-checker": "^0.1.0",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "simplecrawler": "^0.5.4",
+    "zombie": "^4.2.1"
   }
 }

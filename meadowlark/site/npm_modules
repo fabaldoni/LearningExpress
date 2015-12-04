@@ -1,0 +1,15 @@
+npm install -g nodemon
+npm install --save express
+npm install --save express-handlebars
+npm install --save-dev mocha
+npm install --save-dev chai
+npm install --save-dev zombie
+npm install -g jshint
+npm install --save-dev simplecrawler
+npm install --save-dev grunt-link-checker
+npm install --save-dev grunt
+npm install --save-dev grunt-cafe-mocha
+npm install --save-dve grunt-contrib-jshint
+npm install --save-dev grunt-exec
+sudo npm install -g grunt-cli
+
